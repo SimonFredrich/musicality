@@ -5,8 +5,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     background-color: white;
     height:380px;
-    margin-block:auto;
-    margin-inline: 5px;
+    margin:5px;
     width:300px;  
     flex-shrink: 0;
     flex-grow: 0;
@@ -24,6 +23,7 @@
 .card-line {
     margin:3px;
     opacity:0.5;
+    z-index: 0;
 }
 .card-content-img img{
     object-fit: cover;
