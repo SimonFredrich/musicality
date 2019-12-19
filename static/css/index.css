@@ -6,8 +6,9 @@
 *, *:before, *:after {
     box-sizing: border-box;
   }
+
 nav {
-    background-color:orange;
+    background-color:#ff8f00;
     width:100%;
     height:auto;
     padding:18px;
@@ -41,4 +42,17 @@ a {
     float:right;
     font-variant: small-caps;
     font-size: x-large;
+}
+.carousel {
+    display:block;
+    height:400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-block:5px;
+    padding:5px;
+    padding-inline: 15px;
+    background-color: #c56000;
+    display:flex;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }

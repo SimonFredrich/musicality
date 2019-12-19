@@ -1,0 +1,41 @@
+.card {
+    border-radius: 10px;
+    float:left;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: white;
+    height:380px;
+    margin-block:auto;
+    margin-inline: 5px;
+    width:300px;  
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-wrap: 0;
+}
+.card:hover {
+    cursor: pointer;
+}
+.card-content {
+    display:flex;
+    flex-direction: column;
+    overflow:hidden;
+    
+}
+.card-line {
+    margin:3px;
+    opacity:0.5;
+}
+.card-content-img img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+.card-t {
+    text-align: center;
+    font-weight: 500;
+    padding-inline: 15px;
+    padding-block: 5px;
+}
+.card-p {
+    padding:15px;
+}
