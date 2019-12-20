@@ -15,6 +15,12 @@
 	cursor: pointer;
 	outline: inherit;
 }
+body {
+    background-color: #ffc046;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
 nav {
     background-color:#ff8f00;
     width:100%;
@@ -62,6 +68,7 @@ a {
 }
 #courses{
     margin-top: 68px;
+    flex-grow: 1;
 }
 .cardgrid {
     background-color: #ffc046;
@@ -80,6 +87,8 @@ footer {
     background-color: #ff8f00;
     text-align: center;
     padding:20px;
+    width: 100%;
+    height: auto; 
 }
 @media (max-width: 500px) {
     .onbig {
