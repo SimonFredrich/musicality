@@ -51,7 +51,19 @@ a {
 }
 .cardgrid {
     background-color: #ffc046;
-    display:block;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     overflow:hidden;
     padding:10px;
+}
+.footertext {
+    font-weight: 500;
+    margin-block:15px;
+    color:white;
+}
+footer {
+    background-color: #ff8f00;
+    text-align: center;
+    padding:20px;
 }
