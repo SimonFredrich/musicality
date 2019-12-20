@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
 import ButtonAppBar from './components/ButtonAppBar';
+import ResponsiveDrawer from './components/ResponsiveDrawer';
 
-function App() {
-  return (
-    <div className="App">
-      {ButtonAppBar()}
-    </div>
-  );
+
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+        <ResponsiveDrawer />
+      </div>
+    )
+  }
 }
 
 export default App;
