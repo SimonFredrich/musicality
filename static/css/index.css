@@ -13,6 +13,9 @@ nav {
     height:auto;
     padding:18px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    position:fixed;
+    top:0;
+    z-index: 1;
 }
 .navcontainer {
     display:flex;
@@ -43,16 +46,24 @@ a {
     font-variant: small-caps;
     font-size: x-large;
 }
-.carousel {
-    display:block;
-    height:400px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    margin-block:5px;
-    padding:5px;
-    padding-inline: 15px;
-    background-color: #c56000;
+#courses{
+    margin-top: 68px;
+}
+.cardgrid {
+    background-color: #ffc046;
     display:flex;
-    align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow:hidden;
+    padding:10px;
+}
+.footertext {
+    font-weight: 500;
+    margin-block:15px;
+    color:white;
+}
+footer {
+    background-color: #ff8f00;
+    text-align: center;
+    padding:20px;
 }

@@ -1,19 +1,32 @@
+:root{
+    --overlay-opacity:0;
+}
 .card {
     border-radius: 10px;
-    float:left;
+    /*float:var(--card-placing);*/
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     background-color: white;
     height:380px;
-    margin-block:auto;
-    margin-inline: 5px;
+    margin:5px;
     width:300px;  
     flex-shrink: 0;
     flex-grow: 0;
-    flex-wrap: 0;
+    flex-wrap: 0;  
 }
 .card:hover {
     cursor: pointer;
+    animation-name: cardhover;
+    animation-duration: 0.3s;
+}
+@keyframes cardhover {
+    0% {background-color: white;}
+    50% {background-color: gray;}
+    100% {background-color: white;}
+  }
+.overlay:hover{
+    animation-name: cardhover;
+    animation-duration: 0.3s;
 }
 .card-content {
     display:flex;
@@ -24,6 +37,7 @@
 .card-line {
     margin:3px;
     opacity:0.5;
+    z-index: 0;
 }
 .card-content-img img{
     object-fit: cover;
@@ -38,4 +52,27 @@
 }
 .card-p {
     padding:15px;
+}
+
+/*query resolutions from:
+https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
+*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (min-device-width : 320px) and (max-device-width : 480px) {
+    :root {
+        
+    }
+}
+/* iPads (portrait and landscape) ----------- */
+@media (min-device-width : 768px) and (max-device-width : 1024px) {
+    :root {
+        
+    }
+}
+/* Desktops and laptops ----------- */
+@media (min-device-width : 1024px) {
+    :root {
+        
+    }
 }
