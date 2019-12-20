@@ -10,7 +10,6 @@
     opacity: 0.6;
 }
 #sidemenu {
-    display: block;
     position: fixed;
     height: 100vh;
     width:0%;
@@ -19,8 +18,10 @@
     background-color: white;
     color:black;
     z-index: 3;
+    overflow: hidden;
 }
 #sidemenuclose {
+    display:none;
     position:absolute;
     top:15px;
     right:15px;
@@ -29,6 +30,21 @@
 #sidemenuclose img {
     width:18px;
     height:18px;
+}
+#sidemenuitems {
+    display: flex;
+    flex-direction: column;
+}
+#sidemenuitems li {
+    padding:15px;
+    margin:0;
+}
+#sidemenuitems li a{
+    text-decoration: none;
+    color: black;
+}
+#sidemenuitems li:hover {
+    background-color:rgb(221, 221, 221);
 }
 @keyframes sideMenOverAnimation {
     from {
