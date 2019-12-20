@@ -1,25 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import Avatar from '@material-ui/core/Avatar';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
-import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import { AppBar, CssBaseline, Divider, Drawer, Avatar, Hidden, IconButton} from '@material-ui/core';
+import { List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { Inbox, Mail, Menu } from '@material-ui/icons'
+import { Toolbar, Typography } from '@material-ui/core'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { deepOrange, deepPurple } from '@material-ui/core/colors';
-
-
+import { deepPurple } from '@material-ui/core/colors';
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -52,16 +38,35 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-  orange: {
-    color: theme.palette.getContrastText(deepOrange[500]),
-    backgroundColor: deepOrange[500],
-  },
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
   user: {
     marginRight: theme.spacing(2),
+  },
+  SideFooter: {
+    position:'absolute',
+    bottom:0,
+    display:'flex'
+  },
+  sideTop: {
+    display:'flex',
+    alignITems:'center',
+  },
+  sideAvatarWrapper: {
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center',
+    height:'inherit',
+    marginLeft:theme.spacing(2)
+  },
+  sideAvatar: {
+    width:theme.spacing(7),
+    height:theme.spacing(7)
+  },
+  sideUsername: {
+    fontWeight:'normal'
   }
 }));
 
@@ -77,23 +82,23 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-    <div className={classes.toolbar} style={{display:'flex',alignITems:'center',paddingInline:theme.spacing(2)}} >
-      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'inherit'}}>
-        <Avatar className={classes.purple} style={{width:theme.spacing(7),height:theme.spacing(7)}}>A</Avatar>
-        <h3 className={classes.content} style={{fontWeight:'normal'}}>Admin</h3>
+    <div className={[classes.toolbar,classes.sideTop].join(' ')} >
+      <div className={classes.sideAvatarWrapper}>
+        <Avatar className={[classes.purple,classes.sideAvatar].join(' ')}>A</Avatar>
+        <h3 className={[classes.content,classes.sideUsername].join(' ')}>Admin</h3>
       </div>
     </div>
     <Divider />
       <List>
         {['New', 'Save', 'Save Draft', 'Drafts', 'Posts'].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemIcon>{index % 2 === 0 ? <Inbox /> : <Mail />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
       </List>
       <Divider />
-      <div style={{position:'absolute',bottom:0,display:'flex'}}><p className={classes.content} style={{textAlign:'right'}}>Oh! Hello there!</p></div>
+      <div className={classes.sideFooter}><p className={classes.content} style={{textAlign:'right'}}>Oh! Hello there!</p></div>
     </div>
   );
 
@@ -109,7 +114,7 @@ function ResponsiveDrawer(props) {
             onClick={handleDrawerToggle}
             className={classes.menuButton}
           >
-            <MenuIcon />
+            <Menu />
           </IconButton>
           <Typography variant="h6" noWrap>
             Responsive drawer
