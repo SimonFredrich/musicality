@@ -1,0 +1,64 @@
+#sidemenuoverlay {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width:0%;
+    left:0;
+    top:0;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.6;
+}
+#sidemenu {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width:0%;
+    left:0;
+    top:0;
+    background-color: white;
+    color:black;
+    z-index: 3;
+}
+#sidemenuclose {
+    position:absolute;
+    top:15px;
+    right:15px;
+    opacity:0.6;
+}
+#sidemenuclose img {
+    width:18px;
+    height:18px;
+}
+@keyframes sideMenOverAnimation {
+    from {
+        opacity:0%;
+    }
+    to {
+        opacity:0.6;
+    }
+}
+@keyframes sideMenOverAnimationWrap {
+    from {
+        opacity:0.6;
+    }
+    to {
+        opacity:0%;
+    }
+}
+@keyframes sideMenAnimation {
+    from {
+        width:0%;
+    }
+    to {
+        width:300px;
+    }
+}
+@keyframes sideMenAnimationWrap {
+    from {
+        width:300px;
+    }
+    to {
+        width:0%;
+    }
+}

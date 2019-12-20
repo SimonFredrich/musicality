@@ -3,7 +3,6 @@
 }
 .card {
     border-radius: 10px;
-    /*float:var(--card-placing);*/
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     background-color: white;
@@ -52,27 +51,4 @@
 }
 .card-p {
     padding:15px;
-}
-
-/*query resolutions from:
-https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
-*/
-
-/* Smartphones (portrait and landscape) ----------- */
-@media (min-device-width : 320px) and (max-device-width : 480px) {
-    :root {
-        
-    }
-}
-/* iPads (portrait and landscape) ----------- */
-@media (min-device-width : 768px) and (max-device-width : 1024px) {
-    :root {
-        
-    }
-}
-/* Desktops and laptops ----------- */
-@media (min-device-width : 1024px) {
-    :root {
-        
-    }
 }

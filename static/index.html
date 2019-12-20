@@ -8,20 +8,28 @@
     <title>Musicality</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/interface/cards.css">
+    <link rel="stylesheet" href="css/interface/sidemenu.css">
+    <script src="js/index.js" type="module"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul class="navcontainer">
-                <li><a href="#" class="navbtn">Home</a></li>
-                <li>|</li>
-                <li><a href="#" class="navbtn">Courses</a></li>
-                <li>|</li>
-                <li><a href="#" class="navbtn">Post</a></li>
+                <li class="onbig"><a href="#" class="navbtn">Home</a></li>
+                <li class="onbig">|</liclass="onbig">
+                <li class="onbig"><a href="#" class="navbtn">Courses</a></liclass="onbig">
+                <li class="onbig">|</liclass="onbig">
+                <li class="onbig"><a href="#" class="navbtn">Post</a></liclass="onbig">
+                <li class="onsmall"><button class="navbtn" id="menubtn"><img src="img/svg/menu-button.svg" alt="" srcset=""></button></liclass="onbig">
                 <li><a href="#" id="navlogo" class="navbtn">Music<ins>ality</ins></a></li>
             </ul>
         </nav>
     </header>
+    <div id="sidemenuoverlay">
+    </div>
+    <div id="sidemenu">
+        <button id="sidemenuclose"><img src="img/svg/close.svg" alt="closebtn" ></button>
+    </div>
     <div id="courses">
         <div class="cardgrid">
             <div class="card">
