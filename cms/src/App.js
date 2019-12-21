@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import ButtonAppBar from './components/ButtonAppBar';
-import ResponsiveDrawer from './components/ResponsiveDrawer';
-
+import AppBar from './components/AppBar';
 
 class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <ResponsiveDrawer />
+        <AppBar />
       </div>
     )
   }
