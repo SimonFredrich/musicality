@@ -1,0 +1,112 @@
+#sidemenuoverlay {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width:0%;
+    left:0;
+    top:0;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.6;
+}
+#sidemenu {
+    position: fixed;
+    height: 100vh;
+    width:0%;
+    left:0;
+    top:0;
+    background-color: white;
+    color:black;
+    z-index: 3;
+    overflow: hidden;
+}
+#sidemenuitems {
+    display: flex;
+    flex-direction: column;
+}
+#sidemenuitems li {
+    padding:15px;
+    margin:0;
+}
+#sidemenuitems li a{
+    text-decoration: none;
+    color: black;
+}
+#sidemenuitems li:hover {
+    background-color:rgb(221, 221, 221);
+}
+#profile-item{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#profile-item a {
+    text-align: center;
+    font-size: medium;
+    margin-top: 10px;
+}
+#profile-item:hover{
+    background-color: white !important;
+}
+#profilewrapper {
+    width:100px;
+    height:100px;
+    overflow:hidden;
+    border: solid 3px #ffc046;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+}
+#profilewrapper:hover {
+    cursor:pointer;
+}
+#profilewrapper img {
+    height:100%;
+    width:auto;
+    align-items: center;
+}
+
+
+@keyframes sideMenOverAnimation {
+    from {
+        opacity:0%;
+    }
+    to {
+        opacity:0.6;
+    }
+}
+@keyframes sideMenOverAnimationWrap {
+    from {
+        opacity:0.6;
+    }
+    to {
+        opacity:0%;
+    }
+}
+@keyframes sideMenAnimation {
+    from {
+        width:0%;
+    }
+    to {
+        width:300px;
+    }
+}
+@keyframes sideMenAnimationWrap {
+    from {
+        width:300px;
+    }
+    to {
+        width:0%;
+    }
+}
+@media (min-width: 1000px) {
+    #sidemenu {
+        position: absolute;
+        width: 200px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+}

@@ -7,14 +7,14 @@ export default class AppBar extends Component {
         return (
             <div>
                 <nav id="appbar">
-                    <ul class="navcontainer">
+                    <ul className="navcontainer">
                     {/*<li class="onbig"><a href="#" class="navbtn">New</a></li>
                         <li class="onbig">|</li>
                         <li class="onbig"><a href="#" class="navbtn">Archive</a></li>
                         <li class="onbig">|</li>
                         <li class="onbig"><a href="#" class="navbtn">Unpublished</a></li>*/}
-                        <li class="onsmall"><button class="navbtn" id="menubtn"><MenuIcon id="MenuIcon"/></button></li>
-                        <li><a href="#" id="navlogo" class="navbtn">Music<ins>ality</ins></a></li>
+                        <li className="onsmall"><button className="navbtn" id={this.props.menubtnid}><MenuIcon id="MenuIcon"/></button></li>
+                        <li><a href="#" id="navlogo" className="navbtn">Music<ins>ality</ins></a></li>
                     </ul>
                 </nav>
             </div>
