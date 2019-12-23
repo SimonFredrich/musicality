@@ -27,7 +27,7 @@ body {
       display:inline;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 769px) {
   .onbig {
       display:inline;
   }

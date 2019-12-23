@@ -35,7 +35,7 @@ export default class Content extends Component {
             case "profile":
                 return (
                     <div>
-                        drafts
+                        profile
                     </div>
                 );
             break;
