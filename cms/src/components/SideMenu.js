@@ -27,10 +27,12 @@ export default class SideMenu extends Component {
             </div>
             <div id="sidemenu">
                 <ul id="sidemenuitems">
-                    <li id="profile-item"><div id="profilewrapper"><img src={profilepicture}></img></div><a href="#">Admin</a></li>
-                    <li><a href="#">New</a></li>
-                    <li><a href="#">Archive</a></li>
-                    <li><a href="#">Drafts</a></li>
+                    <li id="profile-item"><div id="profilewrapper"><img src={profilepicture}></img></div><a href="javascript:void(0)" onClick={()=>this.props.viewhandler("profile")}>{this.props.user}</a></li>
+                    <li className="liseparator"><hr className="separator"></hr></li>
+                    <li><a href="javascript:void(0)" onClick={()=>{this.props.viewhandler("newedit")}}>New</a></li>
+                    <li><a href="javascript:void(0)" onClick={()=>this.props.viewhandler("archive")}>Archive</a></li>
+                    <li><a href="javascript:void(0)" onClick={()=>this.props.viewhandler("drafts")}>Drafts</a></li>
+                    <li className="liseparator"><hr className="separator"></hr></li>
                 </ul>
             </div>
             </>

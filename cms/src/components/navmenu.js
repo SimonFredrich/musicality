@@ -8,7 +8,7 @@ export default class navmenu {
             this.Overlay.style.width= "100%";
             this.Menu.style.animationName = "sideMenAnimation";
             this.Menu.style.animationDuration = "0.2s"
-            this.Menu.style.width= "300px";
+            this.Menu.style.width= "200px";
         }
         this.wrapSideMenu = () => {     
             this.Overlay.style.animationName = "sideMenOverAnimationWrap";
