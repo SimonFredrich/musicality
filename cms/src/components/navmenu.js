@@ -1,3 +1,4 @@
+//this file needs sidemenu.css to work
 export default class navmenu {
     constructor(Overlay,Menu){
         this.Overlay=Overlay;

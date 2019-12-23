@@ -12,6 +12,7 @@ export default class SideMenu extends Component {
         const menutray = document.getElementById("sidemenu");
         const navmenu = new navmenuobj(overlay,menutray);
         const sidemenuclose = document.getElementById("sidemenuclose");
+        const sidemenulinks = document.getElementsByClassName("sidemenulink");
 
         //sidemenu trigger
         const menubtn = document.getElementById(this.props.trigger);
@@ -19,6 +20,10 @@ export default class SideMenu extends Component {
         //sidemenu setting-up
         menubtn.addEventListener("click", navmenu.unwrapSideMenu);
         overlay.addEventListener("click", navmenu.wrapSideMenu);
+        //wrapping up sidemenu after choosing an option
+        for (let i = 0; i<sidemenulinks.length; i++){
+            sidemenulinks[i].addEventListener("click",navmenu.wrapSideMenu);
+        }
     }
     render() {     
         return (
@@ -29,9 +34,9 @@ export default class SideMenu extends Component {
                 <ul id="sidemenuitems">
                     <li id="profile-item"><div id="profilewrapper"><img src={profilepicture}></img></div><a href="javascript:void(0)" onClick={()=>this.props.viewhandler("profile")}>{this.props.user}</a></li>
                     <li className="liseparator"><hr className="separator"></hr></li>
-                    <li><a href="javascript:void(0)" onClick={()=>{this.props.viewhandler("newedit")}}>New</a></li>
-                    <li><a href="javascript:void(0)" onClick={()=>this.props.viewhandler("archive")}>Archive</a></li>
-                    <li><a href="javascript:void(0)" onClick={()=>this.props.viewhandler("drafts")}>Drafts</a></li>
+                    <li><a className="sidemenulink" href="javascript:void(0)" onClick={()=>this.props.viewhandler("newedit")}>New</a></li>
+                    <li><a className="sidemenulink" href="javascript:void(0)" onClick={()=>this.props.viewhandler("archive")}>Archive</a></li>
+                    <li><a className="sidemenulink" href="javascript:void(0)" onClick={()=>this.props.viewhandler("drafts")}>Drafts</a></li>
                     <li className="liseparator"><hr className="separator"></hr></li>
                 </ul>
             </div>
