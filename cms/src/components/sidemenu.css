@@ -45,7 +45,7 @@
 #profile-item a {
     text-align: center;
     font-size: medium;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 #profile-item:hover{
     background-color: white !important;
