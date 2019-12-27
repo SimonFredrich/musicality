@@ -1,0 +1,26 @@
+#title {
+  width:100%;
+  font-size: 2em;
+}
+#postseparator {
+  margin-block:10px;
+  opacity:0.8;
+}
+#postcontent {
+  width:100%;
+  font-size:1em;
+}
+#title,#postcontent {
+  outline: none;
+  border: none;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-color: white;
+}
+.formsubmit {
+  float:right;
+  margin:5px;
+  border: solid 1px black !important;
+  border-radius:5px !important;
+  padding:5px !important;
+}

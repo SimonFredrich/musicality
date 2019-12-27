@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Content.css';
 import Archive from './content/Archive';
+import New from './content/New';
 
 export default class Content extends Component {
     selectView() {
@@ -8,14 +9,14 @@ export default class Content extends Component {
             case "welcome":
                 return (
                     <div>
-                       welcome 
+                       welcome
                     </div>
                 );
             break;
             case "newedit":
                 return (
                     <div>
-                        newedit
+                        <New />
                     </div>
                 );
             break;
@@ -64,4 +65,3 @@ export default class Content extends Component {
         )
     }
 }
-
