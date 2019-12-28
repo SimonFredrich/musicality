@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Content.css';
 import Archive from './content/Archive';
 import New from './content/New';
+import Welcome from './content/Welcome';
 
 export default class Content extends Component {
     state={
@@ -38,7 +39,7 @@ export default class Content extends Component {
             case "welcome":
                 return (
                     <div>
-                       welcome
+                       <Welcome />
                     </div>
                 );
             break;

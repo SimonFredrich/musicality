@@ -8,7 +8,7 @@ export default class Archive extends Component {
     render() {
         return (
             <div id="Archive">
-                {this.props.list.map((card) =><Card cardTitle={card.title} cardParagraph={card.content}/>)}
+                {this.props.list.reverse().map((card) =><Card cardTitle={card.title} cardParagraph={card.content}/>)}
             </div>
         )
     }
