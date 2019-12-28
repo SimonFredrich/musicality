@@ -16,7 +16,7 @@ export default class Content extends Component {
     fetchData = () => {
     fetch('/api')
         .then(response => response.json())
-        .then(data => this.setState({ list:data }))
+        .then(data => this.setState({ list:data.reverse() }))
     }
     handleChangetitle = (e) => {
         this.setState({title:e.target.value});
