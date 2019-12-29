@@ -1,4 +1,6 @@
 import navmenuobj from './navmenu.js';
+import fetchcards from './fetchcards.js';
+import cardformatter from "./cardformatter.js";
 
 window.onload = () => {
     //all sidemenu items
@@ -14,4 +16,9 @@ window.onload = () => {
     menubtn.addEventListener("click", navmenu.unwrapSideMenu);
     sidemenuclose.addEventListener("click", navmenu.wrapSideMenu);
     overlay.addEventListener("click", navmenu.wrapSideMenu);
+
+    //card fetcher
+    const cardcontainer = document.getElementById('coursescontent');
+    const cardfetcher = fetchcards('/api');
+    cardfetcher.then(res=>cardformatter(res,cardcontainer));
 }

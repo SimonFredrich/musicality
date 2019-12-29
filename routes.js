@@ -5,6 +5,9 @@ const musicpostmodel = require('./models/musicpost.js');
 router.get('/',(req,res)=>{
     musicpostmodel.find({}).then((response)=>res.send(response));
 })
+router.get('/test',(req,res)=>{
+    res.send('this is a response');
+})
 
 router.post('/', async (req,res)=>{
     const musictodb = new musicpostmodel({title:req.body.title,content:req.body.content});

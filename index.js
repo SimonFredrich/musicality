@@ -4,6 +4,7 @@ const port = 4000;
 const database = require('./database.js');
 const router = require('./routes.js');
 
+
 app.use('/',express.static('./static'));
 app.use('/api',express.json());
 app.use('/api',router);
