@@ -8,7 +8,9 @@ router.get('/',(req,res)=>{
 router.get('/test',(req,res)=>{
     res.send('this is a response');
 })
-
+router.get('/:id',(req,res)=>{
+    musicpostmodel.findById(req.params.id).then((response)=>res.send(response));
+})
 router.post('/', async (req,res)=>{
     const musictodb = new musicpostmodel({title:req.body.title,content:req.body.content});
     await musictodb.save().then(res.send({response:'success!'})).catch({response:'db failure'});

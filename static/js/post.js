@@ -1,5 +1,5 @@
 import navmenuobj from './navmenu.js';
-import allcards from './allcards.js';
+import specificpost from './specificpost.js';
 
 window.onload = () => {
     //all sidemenu items
@@ -17,5 +17,5 @@ window.onload = () => {
     overlay.addEventListener("click", navmenu.wrapSideMenu);
 
     //card fetching
-    allcards();
+    specificpost();
 }
