@@ -1,4 +1,4 @@
-//makes a dom card element for each document in the database
+//Post formatting using data and component from specificpost fetch
 
 export default function produce (data,container) {
     console.log('hello');

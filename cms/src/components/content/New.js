@@ -3,8 +3,8 @@ import './New.css';
 
 export default class New extends Component {
   handleSubmit=(e)=>{
-    this.props.viewhandler("archive");
     this.props.handleSubmit(e);
+    this.props.viewhandler("archive");
   }
   render(){
     return(

@@ -61,7 +61,7 @@ export default class Content extends Component {
             case "newedit":
                 return (
                     <div>
-                        <New title={this.state.title} content={this.state.content} handleChangetitle={this.handleChangetitle} handleChangecontent={this.handleChangecontent} handleSubmit={this.handleSubmit} edithandler={this.edithandler} mode={this.props.mode}/>
+                        <New title={this.state.title} content={this.state.content} handleChangetitle={this.handleChangetitle} handleChangecontent={this.handleChangecontent} handleSubmit={this.handleSubmit} edithandler={this.edithandler} mode={this.props.mode} viewhandler={this.props.viewhandler}/>
                     </div>
                 );
             break;
