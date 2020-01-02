@@ -15,5 +15,9 @@ router.post('/', async (req,res)=>{
     const musictodb = new musicpostmodel({title:req.body.title,content:req.body.content});
     await musictodb.save().then(res.send({response:'success!'})).catch({response:'db failure'});
 })
-
+router.delete("/:id", async (req, res)=>{
+    await musicpostmodel.deleteMany({ _id: req.params.id },(err)=>{
+        res.send(err);
+    });
+  });
 module.exports = router;

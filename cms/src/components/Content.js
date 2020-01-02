@@ -34,6 +34,10 @@ export default class Content extends Component {
         }).then(this.setState({title:'',content:''}));
         this.fetchData();
       }
+    deletebyid=(id)=>{
+        fetch('/api/'.concat(id),{method:'DELETE'}).then((res)=>console.log(res));
+        this.fetchData();
+    }
     selectView() {
         switch(this.props.view){
             case "welcome":
@@ -46,14 +50,14 @@ export default class Content extends Component {
             case "newedit":
                 return (
                     <div>
-                        <New title={this.state.title} content={this.state.content} handleChangetitle={this.handleChangetitle} handleChangecontent={this.handleChangecontent} handleSubmit={this.handleSubmit} />
+                        <New title={this.state.title} content={this.state.content} handleChangetitle={this.handleChangetitle} handleChangecontent={this.handleChangecontent} handleSubmit={this.handleSubmit} viewhandler={this.props.viewhandler}/>
                     </div>
                 );
             break;
             case "archive":
                 return (
                     <div>
-                        <Archive list={this.state.list} />
+                        <Archive list={this.state.list} deletebyid={this.deletebyid}/>
                     </div>
                 );
             break;

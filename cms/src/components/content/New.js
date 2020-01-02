@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import './New.css';
 
 export default class New extends Component {
+  handleSubmit=()=>{
+    this.props.viewhandler("archive");
+    this.props.handleSubmit();
+  }
   render(){
     return(
       <div id="New">

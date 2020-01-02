@@ -19,7 +19,7 @@ class App extends React.Component {
         <AppBar menubtnid="menubtn" />
         <div id="body">
           <SideMenu user={this.state.user} trigger="menubtn" viewhandler={this.viewhandler} mystate={this.state.view}/>
-          <Content view={this.state.view} />
+          <Content view={this.state.view} viewhandler={this.viewhandler}/>
         </div>
       </div>
     )
