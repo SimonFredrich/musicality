@@ -7,11 +7,11 @@ export default class Card extends Component {
         return (
             <div id="courses">
                 <div className="cardgrid">
-                    <div className="card">
-                        <div className="overlay"></div>              
-                        <div className="card-content">
+                    <div className="card">                   
+                        <div className="card-content">   
+                            <div className="card-sidemenu" onClick={()=>(this.props.deletebyid(this.props.id))}></div>                   
                             <div className="overlay"></div>
-                            <div className="card-content-img">
+                            <div className="card-content-img">                              
                             <img src={chordtypes}></img>
                             </div>
                                 <h3 className="card-t">{this.props.cardTitle}</h3>

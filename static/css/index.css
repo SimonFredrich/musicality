@@ -103,8 +103,6 @@ footer {
     padding:20px;
     width: 100%;
     height: auto; 
-    position: absolute;
-    bottom:0;
 }
 @media (max-width: 500px) {
     .onbig {
