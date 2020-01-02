@@ -37,7 +37,7 @@ export default class Card extends Component {
                     <div className="card">                   
                         <div className="card-content">
                             <div className="card-sidemenu-trigger" onClick={this.wrap} id={"trigger:".concat(this.props.id)}><LeftArrow className="card-sidemenu-trigger-svg"/></div>   
-                            <CardSideMenu deletebyid={this.props.deletebyid} id={this.props.id} wrap={this.wrap}/>                   
+                            <CardSideMenu deletebyid={this.props.deletebyid} id={this.props.id} wrap={this.wrap} edithandler={this.props.edithandler}/>                   
                             <div className="card-content-img">                              
                             <img src={chordtypes}></img>
                             </div>

@@ -8,7 +8,7 @@ export default class Archive extends Component {
     render() {
         return (
             <div id="Archive">
-                {this.props.list.map((card) =><Card cardTitle={card.title} cardParagraph={card.content} key={card._id} id={card._id} deletebyid={this.props.deletebyid}/>)}
+                {this.props.list.map((card) =><Card cardTitle={card.title} cardParagraph={card.content} key={card._id} id={card._id} deletebyid={this.props.deletebyid} edithandler={this.props.edithandler}/>)}
             </div>
         )
     }

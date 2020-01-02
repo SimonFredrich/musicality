@@ -8,7 +8,7 @@ export default class CardSideMenu extends Component {
         return (
             <div id={this.props.id} className="card-sidemenu">
             <button className="sidemenu-btn" onClick={()=>(this.props.deletebyid(this.props.id))}><DeleteIcon className="sidemenu-icon" /></button>
-            <button className="sidemenu-btn" onClick={()=>(this.props.deletebyid(this.props.id))}><EditIcon className="sidemenu-icon edit" /></button>
+            <button className="sidemenu-btn" onClick={()=>(this.props.edithandler(this.props.id))}><EditIcon className="sidemenu-icon edit" /></button>
             </div>
         )
     }

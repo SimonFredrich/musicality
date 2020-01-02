@@ -8,7 +8,7 @@ export default class Content extends Component {
     state={
         title:'',
         content:'',
-        list:[]
+        list:[],
     }
     componentDidMount(){
     this.fetchData();
@@ -23,6 +23,17 @@ export default class Content extends Component {
     }
     handleChangecontent = (e) =>{
         this.setState({content:e.target.value});
+    }
+    wipe=()=>{
+        this.setState({title:'',content:''});
+    }
+    edithandler = (id) =>{
+        fetch('/api/'.concat(id)).then((res)=>res.json().then((res)=>this.setState({
+            title:res.title,
+            content:res.content
+        })));
+        this.props.setmode("Edit");
+        this.props.viewhandler("newedit");
     }
     handleSubmit = (e) => {
         e.preventDefault();
@@ -50,14 +61,14 @@ export default class Content extends Component {
             case "newedit":
                 return (
                     <div>
-                        <New title={this.state.title} content={this.state.content} handleChangetitle={this.handleChangetitle} handleChangecontent={this.handleChangecontent} handleSubmit={this.handleSubmit} viewhandler={this.props.viewhandler}/>
+                        <New title={this.state.title} content={this.state.content} handleChangetitle={this.handleChangetitle} handleChangecontent={this.handleChangecontent} handleSubmit={this.handleSubmit} edithandler={this.edithandler} mode={this.props.mode}/>
                     </div>
                 );
             break;
             case "archive":
                 return (
                     <div>
-                        <Archive list={this.state.list} deletebyid={this.deletebyid}/>
+                        <Archive list={this.state.list} deletebyid={this.deletebyid} edithandler={this.edithandler}/>
                     </div>
                 );
             break;
