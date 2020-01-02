@@ -20,4 +20,9 @@ router.delete("/:id", async (req, res)=>{
         res.send(err);
     });
   });
+router.put("/:id", async (req,res)=>{
+    await musicpostmodel.findOneAndUpdate({_id:req.params.id}, req.body, (err, place)=> {
+        res.send(place);
+      });
+})
 module.exports = router;

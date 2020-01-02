@@ -8,6 +8,7 @@ export default class Content extends Component {
     state={
         title:'',
         content:'',
+        id:'',
         list:[],
     }
     componentDidMount(){
@@ -32,17 +33,24 @@ export default class Content extends Component {
             title:res.title,
             content:res.content
         })));
+        this.setState({id:id});
         this.props.setmode("Edit");
         this.props.viewhandler("newedit");
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        fetch('/api',{
-          method:'POST',
+        let route = '/api';
+        let method = 'POST';
+        if(this.props.mode=='Edit'){
+            route='/api/'.concat(this.state.id);
+            method = 'PUT';
+        }
+        fetch(route,{
+          method:method,
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify({title:this.state.title,
           content:this.state.content})
-        }).then(this.setState({title:'',content:''}));
+        }).then(this.setState({title:'',content:'',id:''}));
         this.fetchData();
       }
     deletebyid=(id)=>{
