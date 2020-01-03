@@ -14,7 +14,7 @@ export default class AppBar extends Component {
                         <li class="onbig">|</li>
                         <li class="onbig"><a href="#" class="navbtn">Unpublished</a></li>*/}
                         <li className="onsmall"><button className="navbtn" id={this.props.menubtnid}><MenuIcon id="MenuIcon"/></button></li>
-                        <li><a href="#" id="navlogo" className="navbtn">Music<ins>ality</ins></a></li>
+                        <li><a href="../" id="navlogo" className="navbtn">Music<ins>ality</ins></a></li>
                     </ul>
                 </nav>
             </div>

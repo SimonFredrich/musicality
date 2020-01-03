@@ -6,6 +6,7 @@ const router = require('./routes.js');
 const postapi = require('./postapi.js');
 
 app.use('/',express.static('./static'));
+app.use('/admin',express.static('./cms/build'));
 app.use('/post',postapi);
 app.use('/api',express.json());
 app.use('/api',router);
