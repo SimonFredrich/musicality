@@ -6,6 +6,7 @@ export default function produce (data,container) {
     child.className = "post";
     let title = document.createElement("h3");
     title.className = "card-t";
+    title.style.paddingBlock = "20px";
     title.innerHTML = data.title;
     let line = document.createElement("hr");
     line.className = "card-line";

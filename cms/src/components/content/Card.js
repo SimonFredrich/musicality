@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardSideMenu from './CardSideMenu.js';
 import chordtypes from './img/chordtypes.JPG';
 import './cards.css';
+import truncate from './truncate.js';
 import {ReactComponent as LeftArrow} from './svg/left-arrow.svg';
 export default class Card extends Component {  
     state= {
@@ -44,7 +45,7 @@ export default class Card extends Component {
                                 <h3 className="card-t">{this.props.cardTitle}</h3>
                             <hr className="card-line"></hr>
                             <div className="card-p-contain">
-                                <p className="card-p">{this.props.cardParagraph}</p>
+                                <p className="card-p">{truncate(this.props.cardParagraph)}</p>
                             </div>
                         </div>
                     </div>

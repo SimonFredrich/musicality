@@ -1,6 +1,8 @@
 //makes a dom card element for each document in the database
+import truncate from './truncate.js';
 
 export default function produce (data,container) {
+    
     data.forEach((card,index)=>{
         let child = document.createElement("div");
         child.className = "card";
@@ -19,7 +21,7 @@ export default function produce (data,container) {
         line.className = "card-line";
         let paragraph = document.createElement("p");           
         paragraph.className = "card-p";
-        paragraph.innerHTML = card.content;
+        paragraph.innerHTML = truncate(card.content);
         cardcontent.appendChild(cardContentImg);
         cardcontent.appendChild(title);
         cardcontent.appendChild(line);

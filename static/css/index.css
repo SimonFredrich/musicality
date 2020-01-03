@@ -27,7 +27,7 @@ nav {
     height:auto;
     padding:18px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    position:fixed;
+    position:sticky;
     top:0;
     z-index: 1;
 }
@@ -72,7 +72,8 @@ a {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     background-color: white;
     margin:5px;
-    width:100%;   
+    width:inherit; 
+    min-height: 100vh;  
     display:flex;
     flex-direction: column;
     overflow:hidden;
@@ -81,7 +82,6 @@ a {
     font-size: 2em;
 }
 #courses{
-    margin-top: 68px;
     flex-grow: 1;
 }
 .cardgrid {
@@ -91,6 +91,7 @@ a {
     justify-content: space-evenly;
     overflow:hidden;
     padding:10px;
+    padding-bottom:0;
 }
 .footertext {
     font-weight: 500;
@@ -104,19 +105,24 @@ footer {
     width: 100%;
     height: auto; 
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .onbig {
-        display:none;
+        display:none !important;
     }
     .onsmall {
-        display:inline;
+        display:inline !important;
     }
 }
-@media (min-width: 500px) {
+@media (min-width: 800px) {
     .onbig {
-        display:inline;
+        display: initial !important;
     }
     .onsmall {
-        display:none;
+        display:none !important;
+    }
+    .content{
+        display:grid;
+        grid-template-columns: 1fr 6fr;
+        padding-left: 0px;
     }
 }

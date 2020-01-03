@@ -20,6 +20,10 @@
     z-index: 3;
     overflow: hidden;
 }
+.postsidemenu{
+    padding-top: 68px;
+    width:200px;
+}
 #sidemenuclose {
     display:none;
     position:absolute;
@@ -31,20 +35,26 @@
     width:18px;
     height:18px;
 }
-#sidemenuitems {
+.sidemenuitems {
+    background-color: white;
     display: flex;
     flex-direction: column;
 }
-#sidemenuitems li {
+.sidemenuitems li {
     padding:15px;
     margin:0;
+    display:block;
 }
-#sidemenuitems li a{
+.sidemenuitems li a{
     text-decoration: none;
     color: black;
 }
-#sidemenuitems li:hover {
+.fullheight{
+    min-height: 100vh;
+}
+.sidemenuitems li:hover {
     background-color:rgb(221, 221, 221);
+    cursor:pointer;
 }
 @keyframes sideMenOverAnimation {
     from {
