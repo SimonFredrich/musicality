@@ -1,4 +1,9 @@
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://admin:<passwordflor>@musicality-v04uq.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-module.exports = client;
+//mongodbatlas
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://test:case@musicality-shard-00-00-v04uq.mongodb.net:27017,musicality-shard-00-01-v04uq.mongodb.net:27017,musicality-shard-00-02-v04uq.mongodb.net:27017/test?ssl=true&replicaSet=Musicality-shard-0&authSource=admin&retryWrites=true&w=majority', {useNewUrlParser: true},()=>console.log('database is connected'));
+module.exports = mongoose;
+
+//localhost
+/*const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/musicality', {useNewUrlParser: true},()=>console.log('database is connected'));
+module.exports = mongoose;*/
