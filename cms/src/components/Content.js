@@ -15,7 +15,7 @@ export default class Content extends Component {
     this.fetchData();
     }
     fetchData = () => {
-    fetch('/api')
+    fetch('/api',{headers:{'Cache-Control' : 'no-cache'}})
         .then(response => response.json())
         .then(data => this.setState({ list:data.reverse() }))
     }
@@ -47,11 +47,10 @@ export default class Content extends Component {
         }
         fetch(route,{
           method:method,
-          headers:{'Content-Type':'application/json'},
+          headers:{'Content-Type':'application/json','Cache-Control' : 'no-cache'},
           body:JSON.stringify({title:this.state.title,
           content:this.state.content})
-        }).then(this.setState({title:'',content:'',id:''}));
-        this.fetchData();
+        }).then(this.setState({title:'',content:'',id:''})).then(this.fetchData()).then(console.log(this.state.list));
       }
     deletebyid=(id)=>{
         fetch('/api/'.concat(id),{method:'DELETE'}).then((res)=>console.log(res));

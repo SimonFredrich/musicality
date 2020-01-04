@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './New.css';
 
 export default class New extends Component {
-  handleSubmit=(e)=>{
+  handleSubmit= (e)=>{
     this.props.handleSubmit(e);
     this.props.viewhandler("archive");
   }
