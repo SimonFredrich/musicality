@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 import './New.css';
 
 export default class New extends Component {
@@ -13,7 +15,8 @@ export default class New extends Component {
         <form method="POST" autoComplete="off" id="newform" onSubmit={this.handleSubmit}>
           <input type="text" value={this.props.title} onChange={this.props.handleChangetitle} name="title" id="title" placeholder="Title..."></input>
           <hr id="postseparator"></hr>
-          <textarea id="postcontent" value={this.props.content}  onChange={this.props.handleChangecontent} name="postcontent" rows="10" placeholder="Content..."></textarea>
+          {/*}<textarea id="postcontent" value={this.props.content}  onChange={this.props.handleChangecontent} name="postcontent" rows="10" placeholder="Content..."></textarea>{*/}
+          <ReactQuill value={this.props.content} onChange={this.props.handlequillchange.bind(this)} name="postcontent" id="postcontent"/>
           <input type="submit" className="formsubmit" value="Publish" name="publish"></input>
         </form>
       </div>

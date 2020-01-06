@@ -28,6 +28,9 @@ export default class Content extends Component {
     handleChangecontent = (e) =>{
         this.setState({content:e.target.value});
     }
+    handlequillchange = (value) =>{
+        this.setState({content:value});
+    }
     wipe=()=>{
         this.setState({title:'',content:''});
     }
@@ -71,7 +74,7 @@ export default class Content extends Component {
             case "newedit":
                 return (
                     <div>
-                        <New title={this.state.title} content={this.state.content} handleChangetitle={this.handleChangetitle} handleChangecontent={this.handleChangecontent} handleSubmit={this.handleSubmit} edithandler={this.edithandler} mode={this.props.mode} viewhandler={this.props.viewhandler}/>
+                        <New title={this.state.title} content={this.state.content} handleChangetitle={this.handleChangetitle} handleChangecontent={this.handleChangecontent} handleSubmit={this.handleSubmit} edithandler={this.edithandler} mode={this.props.mode} viewhandler={this.props.viewhandler} handlequillchange={this.handlequillchange}/>
                     </div>
                 );
             break;
